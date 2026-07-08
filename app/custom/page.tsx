@@ -4,48 +4,48 @@ import Link from "next/link";
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Custom Furniture Manufacturer | Bespoke, Made to Order | Meimi&H",
+  title: "Custom Pet Furniture | Bespoke, Made to Order | MINHE",
   description:
-    "Bespoke furniture made to order in our Foshan atelier. Two decades of craftsmanship, factory-direct: custom sofas, dining, bedroom, wardrobes, cabinetry and whole-home interiors, shipped worldwide.",
+    "Bespoke pet co-living furniture made to order in our Foshan atelier. Custom pet-den sofas, co-sleep beds, litter cabinets and whole-home layouts, sized to your space and your pets, shipped worldwide.",
   alternates: { canonical: "/custom" },
   openGraph: {
-    title: "Custom Furniture Manufacturer | Bespoke, Made to Order | Meimi&H",
+    title: "Custom Pet Furniture | Bespoke, Made to Order | MINHE",
     description:
-      "Bespoke furniture made to order in our Foshan atelier — factory-direct, shipped worldwide.",
+      "Bespoke pet co-living furniture made to order in our Foshan atelier - factory-direct, shipped worldwide.",
     type: "website",
   },
 };
 
 const WHATSAPP =
   "https://wa.me/8618320072414?text=" +
-  encodeURIComponent("Hi Meimi&H, I'd like to discuss a custom furniture project.");
+  encodeURIComponent("Hi MINHE, I'd like to discuss a custom pet furniture project.");
 
 const HERO_IMAGE = encodeURI("/images/explore by space/Vivian sofa/New Arrivals.jpg");
 
 const capabilities = [
   {
-    title: "Living & Lounge",
-    description: "Custom sofas, sectionals, armchairs and coffee tables, sized and upholstered to your space.",
+    title: "Pet-Den Sofas",
+    description: "Custom sofas and sectionals with built-in nooks and dens, sized and upholstered to your space.",
   },
   {
-    title: "Dining",
-    description: "Bespoke dining tables and chairs in solid wood, stone and premium finishes.",
+    title: "Co-Sleep Beds",
+    description: "Beds and chaise loungers with a safe, semi-open pet compartment designed into the frame.",
   },
   {
-    title: "Bedroom",
-    description: "Beds, nightstands and dressers — plus our signature hand-tufted mattresses.",
+    title: "Lounge & Accent",
+    description: "Pet lounge chairs and loungers shaped with soft curves and low, easy steps.",
   },
   {
-    title: "Wardrobes & Storage",
-    description: "Full-height wardrobes and dressing systems with configurable interiors.",
+    title: "Cabinets & Storage",
+    description: "Media units and storage benches with hidden pet spaces and discreet litter-box enclosures.",
   },
   {
-    title: "Kitchen & Cabinetry",
-    description: "Turnkey kitchen systems with precise millwork, stone worktops and integrated appliances.",
+    title: "Cat-Climb Structures",
+    description: "Shelving and wall systems with replaceable scratch panels and climbing routes built in.",
   },
   {
-    title: "Wall Panels & Doors",
-    description: "Textured wall panels, statement doors and integrated TV cabinetry as a continuous surface.",
+    title: "Whole-Home Layouts",
+    description: "Full human-and-pet interior plans, coordinated across living, bedroom and utility spaces.",
   },
 ];
 
@@ -56,19 +56,19 @@ const reasons = [
       "You work with the makers, not a middleman. Transparent production and factory-direct pricing on every piece.",
   },
   {
-    title: "Two Decades of Craft",
+    title: "Designed Around Pets",
     description:
-      "We began as a furniture factory. In 2020 we opened a dedicated company to bring that workshop directly to clients worldwide.",
+      "Every commission starts from how your pet actually lives - safe dens, low steps, scratch-friendly surfaces and easy-clean fabrics.",
   },
   {
     title: "Truly Made to Order",
     description:
-      "Dimensions, upholstery, materials and finishes — tailored to your project, not adapted from a catalogue.",
+      "Dimensions, upholstery, materials and finishes - tailored to your home and your pets, not adapted from a catalogue.",
   },
   {
     title: "Shipped Worldwide",
     description:
-      "We handle export packing and global logistics, so a bespoke interior from Foshan arrives ready to install.",
+      "We handle export packing and global logistics, so bespoke pet furniture from Foshan arrives ready to enjoy.",
   },
 ];
 
@@ -76,7 +76,7 @@ const steps = [
   {
     n: "01",
     title: "Consultation",
-    description: "Share your space, references and requirements over WhatsApp. We discuss what's possible.",
+    description: "Share your space, your pets and references over WhatsApp. We discuss what's possible.",
   },
   {
     n: "02",
@@ -96,7 +96,7 @@ const steps = [
   {
     n: "05",
     title: "Global Logistics",
-    description: "We export-pack and ship worldwide, coordinating delivery to your door or project site.",
+    description: "We export-pack and ship worldwide, coordinating delivery to your door.",
   },
 ];
 
@@ -106,7 +106,7 @@ export default function CustomPage() {
       {/* HERO */}
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <Image src={HERO_IMAGE} alt="Bespoke furniture by Meimi&H" fill priority className="object-cover" />
+          <Image src={HERO_IMAGE} alt="Bespoke pet furniture by MINHE" fill priority className="object-cover" />
           <div className="absolute inset-0 bg-stone-950/50" />
         </div>
         <div className="mx-auto flex min-h-[78vh] max-w-4xl flex-col items-center justify-center px-6 py-32 text-center">
@@ -114,12 +114,12 @@ export default function CustomPage() {
             Custom Furniture
           </p>
           <h1 className="mt-6 text-4xl font-extralight leading-[1.1] tracking-tight text-white sm:text-6xl">
-            Bespoke furniture,
+            Bespoke pet furniture,
             <br className="hidden sm:block" /> made to order in Foshan
           </h1>
           <p className="mt-8 max-w-xl text-base font-light leading-loose text-white/80">
-            From a single custom sofa to a whole-home interior — designed with you,
-            handcrafted in our atelier, and shipped worldwide.
+            From a single pet-den sofa to a whole-home layout - designed around your
+            pets, handcrafted in our atelier, and shipped worldwide.
           </p>
           <a
             href={WHATSAPP}
@@ -141,13 +141,13 @@ export default function CustomPage() {
               Bespoke Manufacturing
             </p>
             <h2 className="mt-5 text-3xl font-extralight tracking-tight text-stone-900 sm:text-4xl">
-              A custom furniture manufacturer you work with directly.
+              A custom pet furniture maker you work with directly.
             </h2>
             <p className="mt-8 text-base font-light leading-loose text-stone-500 sm:text-lg">
-              Meimi&amp;H is a Foshan-based atelier specialising in made-to-order furniture
-              for discerning clients around the world. Whether you&apos;re furnishing a single
-              room or commissioning an entire residence, every piece is built to your
-              specification and finished by hand.
+              MINHE is a Foshan-based atelier specialising in made-to-order furniture
+              for homes shared with pets. Whether you&apos;re furnishing a single room or
+              planning an entire residence around your companions, every piece is
+              built to your specification and finished by hand.
             </p>
           </div>
         </FadeIn>
@@ -190,7 +190,7 @@ export default function CustomPage() {
           <FadeIn>
             <div className="mb-16 max-w-2xl">
               <p className="text-xs font-medium uppercase tracking-[0.4em] text-stone-400">
-                Why Meimi&amp;H
+                Why MINHE
               </p>
               <h2 className="mt-4 text-3xl font-extralight tracking-tight text-stone-900 sm:text-4xl">
                 The workshop, brought directly to you
@@ -271,11 +271,11 @@ export default function CustomPage() {
       {/* CTA STRIP */}
       <section className="border-t border-stone-200/70 bg-white/60 px-6 py-20 text-center sm:px-8 lg:px-10">
         <h2 className="text-2xl font-extralight tracking-tight text-stone-900 sm:text-3xl">
-          Tell us what you have in mind.
+          Tell us about your home and your pets.
         </h2>
         <p className="mx-auto mt-4 max-w-md text-sm font-light leading-relaxed text-stone-500">
-          Share your space and references — we&apos;ll come back with ideas, materials and a
-          factory-direct quote.
+          Share your space and references - we&apos;ll come back with ideas, materials
+          and a factory-direct quote.
         </p>
         <a
           href={WHATSAPP}
