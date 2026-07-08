@@ -30,7 +30,7 @@ export default function CaseShowcasePage() {
   }));
 
   return (
-    <main className="bg-[#FAF9F6] text-stone-800">
+    <main className="bg-[#F7F2EA] text-stone-800">
       {/* HEADER */}
       <section className="px-6 pt-32 sm:px-8 lg:px-10 lg:pt-40">
         <FadeIn>
@@ -84,10 +84,10 @@ export default function CaseShowcasePage() {
           Visit us, or bring us your project.
         </h2>
         <a
-          href="https://wa.me/8617796076275"
+          href="https://wa.me/8618320072414"
           target="_blank"
           rel="noreferrer"
-          className="mt-8 inline-flex items-center gap-2 border-b border-[#6B2737] pb-1 text-sm font-medium tracking-[0.12em] text-[#6B2737] transition-colors duration-300 hover:border-stone-900 hover:text-stone-900"
+          className="mt-8 inline-flex items-center gap-2 border-b border-[#B39A80] pb-1 text-sm font-medium tracking-[0.12em] text-[#B39A80] transition-colors duration-300 hover:border-stone-900 hover:text-stone-900"
         >
           START A CONVERSATION
           <span>&rarr;</span>

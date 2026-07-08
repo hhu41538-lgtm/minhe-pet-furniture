@@ -7,7 +7,7 @@ import FadeIn from "@/components/ui/FadeIn";
 import { getPostSlugs, getPostBySlug } from "@/lib/blog";
 
 const WHATSAPP =
-  "https://wa.me/8617796076275?text=" +
+  "https://wa.me/8618320072414?text=" +
   encodeURIComponent("Hi Meimi&H, I read your guide and I'd like to discuss a custom project.");
 
 export function generateStaticParams() {
@@ -71,7 +71,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <main className="bg-[#FAF9F6] text-stone-800">
+    <main className="bg-[#F7F2EA] text-stone-800">
       {/* BREADCRUMB */}
       <div className="mx-auto max-w-3xl px-6 pt-28 sm:px-8 lg:px-10 lg:pt-32">
         <Link
@@ -134,7 +134,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                   {block.items.map((item, j) => (
                     <li
                       key={j}
-                      className="relative pl-5 text-base font-light leading-loose text-stone-600 before:absolute before:left-0 before:top-[0.7em] before:h-1 before:w-1 before:rounded-full before:bg-[#6B2737]"
+                      className="relative pl-5 text-base font-light leading-loose text-stone-600 before:absolute before:left-0 before:top-[0.7em] before:h-1 before:w-1 before:rounded-full before:bg-[#B39A80]"
                     >
                       {renderInline(item)}
                     </li>
@@ -161,14 +161,14 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             <div className="mt-6 flex flex-wrap gap-4">
               <Link
                 href="/custom"
-                className="inline-flex items-center gap-2 bg-[#6B2737] px-6 py-3 text-sm font-medium tracking-[0.12em] text-white transition-colors duration-300 hover:bg-stone-900"
+                className="inline-flex items-center gap-2 bg-[#B39A80] px-6 py-3 text-sm font-medium tracking-[0.12em] text-white transition-colors duration-300 hover:bg-stone-900"
               >
                 CUSTOM SERVICE
                 <span>&rarr;</span>
               </Link>
               <Link
                 href="/products"
-                className="inline-flex items-center gap-2 border-b border-[#6B2737] pb-1 text-sm font-medium tracking-[0.12em] text-[#6B2737] transition-colors duration-300 hover:border-stone-900 hover:text-stone-900"
+                className="inline-flex items-center gap-2 border-b border-[#B39A80] pb-1 text-sm font-medium tracking-[0.12em] text-[#B39A80] transition-colors duration-300 hover:border-stone-900 hover:text-stone-900"
               >
                 BROWSE COLLECTIONS
                 <span>&rarr;</span>

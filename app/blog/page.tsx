@@ -23,7 +23,7 @@ export default function BlogPage() {
   const posts = getPosts();
 
   return (
-    <main className="bg-[#FAF9F6] text-stone-800">
+    <main className="bg-[#F7F2EA] text-stone-800">
       {/* HEADER */}
       <section className="px-6 pt-32 sm:px-8 lg:px-10 lg:pt-40">
         <FadeIn>
@@ -61,13 +61,13 @@ export default function BlogPage() {
                     <p className="text-xs font-medium uppercase tracking-[0.2em] text-stone-400">
                       {formatDate(post.date)} &middot; {post.readingTime}
                     </p>
-                    <h2 className="mt-3 text-2xl font-extralight leading-snug tracking-tight text-stone-900 transition-colors duration-300 group-hover:text-[#6B2737] sm:text-3xl">
+                    <h2 className="mt-3 text-2xl font-extralight leading-snug tracking-tight text-stone-900 transition-colors duration-300 group-hover:text-[#B39A80] sm:text-3xl">
                       {post.title}
                     </h2>
                     <p className="mt-4 max-w-2xl text-base font-light leading-loose text-stone-500">
                       {post.excerpt}
                     </p>
-                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium tracking-[0.12em] text-[#6B2737]">
+                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium tracking-[0.12em] text-[#B39A80]">
                       READ MORE
                       <span className="transition-transform duration-300 group-hover:translate-x-1">
                         &rarr;

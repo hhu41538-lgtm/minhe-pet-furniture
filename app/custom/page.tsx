@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 const WHATSAPP =
-  "https://wa.me/8617796076275?text=" +
+  "https://wa.me/8618320072414?text=" +
   encodeURIComponent("Hi Meimi&H, I'd like to discuss a custom furniture project.");
 
 const HERO_IMAGE = encodeURI("/images/explore by space/Vivian sofa/New Arrivals.jpg");
@@ -102,7 +102,7 @@ const steps = [
 
 export default function CustomPage() {
   return (
-    <main className="bg-[#FAF9F6] text-stone-800">
+    <main className="bg-[#F7F2EA] text-stone-800">
       {/* HERO */}
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10">
@@ -125,7 +125,7 @@ export default function CustomPage() {
             href={WHATSAPP}
             target="_blank"
             rel="noreferrer"
-            className="mt-10 inline-flex items-center gap-2 bg-[#6B2737] px-8 py-3.5 text-sm font-medium tracking-[0.12em] text-white transition-colors duration-300 hover:bg-white hover:text-stone-900"
+            className="mt-10 inline-flex items-center gap-2 bg-[#B39A80] px-8 py-3.5 text-sm font-medium tracking-[0.12em] text-white transition-colors duration-300 hover:bg-white hover:text-stone-900"
           >
             START YOUR PROJECT
             <span>&rarr;</span>
@@ -170,7 +170,7 @@ export default function CustomPage() {
             {capabilities.map((cap, index) => (
               <FadeIn key={cap.title} delay={(index % 3) * 100}>
                 <div>
-                  <span className="block h-px w-8 bg-[#6B2737]" />
+                  <span className="block h-px w-8 bg-[#B39A80]" />
                   <h3 className="mt-6 text-xl font-light tracking-tight text-stone-900">
                     {cap.title}
                   </h3>
@@ -231,7 +231,7 @@ export default function CustomPage() {
             {steps.map((step, index) => (
               <FadeIn key={step.n} delay={(index % 5) * 60}>
                 <div className="grid grid-cols-[auto_1fr] items-start gap-6 border-t border-stone-200 py-8 sm:gap-10">
-                  <span className="text-2xl font-extralight tracking-tight text-[#6B2737]">
+                  <span className="text-2xl font-extralight tracking-tight text-[#B39A80]">
                     {step.n}
                   </span>
                   <div>
@@ -260,7 +260,7 @@ export default function CustomPage() {
           </h2>
           <Link
             href="/products"
-            className="group mt-8 inline-flex items-center gap-2 text-sm font-medium tracking-[0.12em] text-[#6B2737] transition-colors duration-300 hover:text-stone-900"
+            className="group mt-8 inline-flex items-center gap-2 text-sm font-medium tracking-[0.12em] text-[#B39A80] transition-colors duration-300 hover:text-stone-900"
           >
             VIEW PRODUCTS
             <span className="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
@@ -281,7 +281,7 @@ export default function CustomPage() {
           href={WHATSAPP}
           target="_blank"
           rel="noreferrer"
-          className="mt-8 inline-flex items-center gap-2 bg-[#6B2737] px-8 py-3.5 text-sm font-medium tracking-[0.12em] text-white transition-colors duration-300 hover:bg-stone-900"
+          className="mt-8 inline-flex items-center gap-2 bg-[#B39A80] px-8 py-3.5 text-sm font-medium tracking-[0.12em] text-white transition-colors duration-300 hover:bg-stone-900"
         >
           START ON WHATSAPP
           <span>&rarr;</span>

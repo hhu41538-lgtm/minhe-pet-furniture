@@ -9,25 +9,28 @@ type MenuColumn = { title: string; items: SubItem[] };
 
 const productsMenu: MenuColumn[] = [
   {
-    title: "Ready-Made Collections",
+    title: "Living Room",
     items: [
-      { label: "Living Room", href: "/products#living-room" },
-      { label: "Dining", href: "/products#dining" },
-      { label: "Bedroom", href: "/products#bedroom" },
-      { label: "Other Spaces", href: "/products#other-spaces" },
+      { label: "Pet-Den Sofas", href: "/products#living" },
+      { label: "Coffee & Side Tables", href: "/products#living" },
+      { label: "Media Cabinets", href: "/products#living" },
     ],
   },
   {
-    title: "Custom Interiors",
+    title: "Bedroom & Lounge",
     items: [
-      { label: "Wall Panels, Doors & TV Cabinets", href: "/products#wall-panels" },
-      { label: "Kitchen Cabinetry", href: "/products#kitchen" },
-      { label: "Wardrobes", href: "/products#wardrobes" },
+      { label: "Co-Sleep Beds", href: "/products#bedroom" },
+      { label: "Pet Chaise & Loungers", href: "/products#lounge" },
+      { label: "Accent Chairs", href: "/products#lounge" },
     ],
   },
   {
-    title: "Signature Craft",
-    items: [{ label: "Handmade Mattress", href: "/products#mattress" }],
+    title: "Storage & Utility",
+    items: [
+      { label: "Litter Cabinets", href: "/products#storage" },
+      { label: "Storage Benches", href: "/products#storage" },
+      { label: "Cat-Climb Shelving", href: "/products#storage" },
+    ],
   },
 ];
 
@@ -48,19 +51,25 @@ export default function Header() {
 
   const navLinkClass = (href: string, exact = true) => {
     const isActive = exact ? pathname === href : pathname.startsWith(href);
-    return `relative pb-1 transition hover:text-stone-950 after:absolute after:-bottom-0.5 after:left-0 after:h-px after:bg-[#6B2737] after:transition-all after:duration-300 ${
+    return `relative pb-1 transition hover:text-stone-950 after:absolute after:-bottom-0.5 after:left-0 after:h-px after:bg-[#B39A80] after:transition-all after:duration-300 ${
       isActive ? "text-stone-950 after:w-full" : "after:w-0 hover:after:w-full"
     }`;
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-stone-200/80 bg-[#FAF9F6] shadow-sm backdrop-blur">
+    <header className="sticky top-0 z-40 w-full border-b border-stone-200/80 bg-[#F7F2EA] shadow-sm backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 sm:px-8 lg:px-10">
-        <Link
-          href="/"
-          className="font-[family-name:var(--font-jost)] text-2xl font-medium tracking-[0.12em] text-stone-900"
-        >
-          Meimi&H
+        <Link href="/" className="flex items-center gap-2.5" aria-label="MINHE home">
+          <svg viewBox="0 0 120 120" className="h-9 w-9" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M34 92 Q28 92 28 86 L28 63 Q28 32 60 32 Q92 32 92 63 L92 86 Q92 92 86 92 Z" fill="#B39A80" />
+            <ellipse cx="60" cy="75" rx="11" ry="8.5" fill="#F7F2EA" />
+            <circle cx="46" cy="61" r="5" fill="#F7F2EA" />
+            <circle cx="60" cy="55.5" r="5.5" fill="#F7F2EA" />
+            <circle cx="74" cy="61" r="5" fill="#F7F2EA" />
+          </svg>
+          <span className="font-[family-name:var(--font-playfair-display)] text-2xl font-medium tracking-[0.2em] text-stone-900">
+            MINHE
+          </span>
         </Link>
 
         {/* Desktop nav */}
@@ -93,34 +102,34 @@ export default function Header() {
                         </p>
                         <ul className="space-y-3">
                           {col.items.map((item) => (
-                            <li key={item.href}>
+                            <li key={item.label}>
                               <Link
                                 href={item.href}
-                                className="block text-sm text-stone-800 transition hover:text-[#6B2737]"
-                              onClick={() => setMegaOpen(false)}
-                            >
-                              {item.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+                                className="block text-sm text-stone-800 transition hover:text-[#B39A80]"
+                                onClick={() => setMegaOpen(false)}
+                              >
+                                {item.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
                   <Link
                     href="/custom"
                     onClick={() => setMegaOpen(false)}
-                    className="group flex items-center justify-between border-t border-stone-100 bg-[#FAF9F6] px-8 py-5 transition-colors hover:bg-stone-100"
+                    className="group flex items-center justify-between border-t border-stone-100 bg-[#F7F2EA] px-8 py-5 transition-colors hover:bg-stone-100"
                   >
                     <span>
                       <span className="block text-sm font-semibold tracking-tight text-stone-900">
-                        Custom Furniture
+                        Custom & Whole-Home
                       </span>
                       <span className="mt-0.5 block text-xs font-light text-stone-500">
-                        Bespoke pieces &amp; whole-home interiors, made to order
+                        Bespoke pet-integrated furniture, made to order
                       </span>
                     </span>
-                    <span className="text-sm text-[#6B2737] transition-transform duration-300 group-hover:translate-x-1">
+                    <span className="text-sm text-[#B39A80] transition-transform duration-300 group-hover:translate-x-1">
                       &rarr;
                     </span>
                   </Link>
@@ -159,14 +168,14 @@ export default function Header() {
 
       {/* Mobile drawer */}
       {mobileOpen && (
-        <div className="border-t border-stone-200 bg-[#FAF9F6] lg:hidden">
+        <div className="border-t border-stone-200 bg-[#F7F2EA] lg:hidden">
           <div className="mx-auto max-w-7xl px-6 py-4 sm:px-8">
             <ul className="space-y-1 text-sm font-medium text-stone-800">
               <li>
                 <Link
                   href="/"
                   className={`block rounded px-3 py-3 hover:bg-stone-100 ${
-                    pathname === "/" ? "bg-stone-100 text-[#6B2737]" : ""
+                    pathname === "/" ? "bg-stone-100 text-[#B39A80]" : ""
                   }`}
                   onClick={() => setMobileOpen(false)}
                 >
@@ -193,7 +202,7 @@ export default function Header() {
                         </p>
                         <ul className="space-y-1 pl-1">
                           {col.items.map((item) => (
-                            <li key={item.href}>
+                            <li key={item.label}>
                               <Link
                                 href={item.href}
                                 className="block rounded px-2 py-2 text-sm text-stone-800 hover:bg-stone-100"
@@ -219,7 +228,7 @@ export default function Header() {
                     <Link
                       href={item.href}
                       className={`block rounded px-3 py-3 hover:bg-stone-100 ${
-                        pathname === item.href ? "bg-stone-100 text-[#6B2737]" : ""
+                        pathname === item.href ? "bg-stone-100 text-[#B39A80]" : ""
                       }`}
                       onClick={() => setMobileOpen(false)}
                     >

@@ -1,18 +1,20 @@
 export const siteConfig = {
-  name: "Meimi&H",
-  url: "https://meimi-furniture-showcase.vercel.app",
-  title: "Meimi&H - Premium Furniture from Foshan",
+  name: "MINHE",
+  url: "https://minhe-pet-furniture.vercel.app",
+  title: "MINHE - Pet & Home Living Furniture from Foshan",
   description:
-    "High-end furniture direct from our Foshan atelier. Sofas, custom interiors, beds, dining and more. Est. 2020.",
+    "Modern co-living furniture where pets belong, beautifully. Sofas, beds, cabinets and lounge pieces with hidden nooks, dens and beds built in - direct from our Foshan atelier.",
   ogImage: "/images/Hero/714ea3cf-88bb-4473-bb3b-0d320da9d334.jpg",
   keywords: [
-    "Meimi&H",
-    "Foshan furniture manufacturer",
-    "custom furniture China",
-    "high-end furniture supplier",
-    "handmade mattress manufacturer",
-    "OEM furniture Foshan",
+    "MINHE",
+    "pet furniture",
+    "cat furniture",
+    "dog furniture",
+    "pet sofa",
+    "pet bed furniture",
+    "cat litter cabinet",
+    "human pet co-living furniture",
+    "Foshan pet furniture manufacturer",
   ],
 };
-
 export type SiteConfig = typeof siteConfig;

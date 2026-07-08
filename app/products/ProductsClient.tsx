@@ -14,10 +14,10 @@ const readyMadeSubs = [
   { id: "bedroom", title: "Bedroom", category: "Bedroom" },
 ];
 
-const WHATSAPP = "https://wa.me/8617796076275";
+const WHATSAPP = "https://wa.me/8618320072414";
 
 const inquireLink =
-  "group/cta mt-4 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-[#6B2737] transition-colors duration-300 hover:text-stone-900";
+  "group/cta mt-4 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-[#B39A80] transition-colors duration-300 hover:text-stone-900";
 
 export default function ProductsClient(props: {
   products: Product[];
@@ -28,7 +28,7 @@ export default function ProductsClient(props: {
   const { products, customCategories, otherSpaces, mattress } = props;
 
   return (
-    <main className="bg-[#FAF9F6] text-stone-800">
+    <main className="bg-[#F7F2EA] text-stone-800">
       <div className="mx-auto max-w-6xl px-6 pt-32 sm:px-8 lg:px-10 lg:pt-40">
         {/* READY-MADE */}
         <section id="ready-made" className="scroll-mt-24">
@@ -53,7 +53,7 @@ export default function ProductsClient(props: {
                       <h2 className="text-2xl font-extralight tracking-tight text-stone-900 sm:text-3xl">
                         {sub.title}
                       </h2>
-                      <span className="mt-4 block h-px w-10 bg-[#6B2737]" />
+                      <span className="mt-4 block h-px w-10 bg-[#B39A80]" />
                     </div>
                   </FadeIn>
                   <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
@@ -102,7 +102,7 @@ export default function ProductsClient(props: {
                   <h2 className="text-2xl font-extralight tracking-tight text-stone-900 sm:text-3xl">
                     {otherSpaces.title}
                   </h2>
-                  <span className="mt-4 block h-px w-10 bg-[#6B2737]" />
+                  <span className="mt-4 block h-px w-10 bg-[#B39A80]" />
                 </div>
                 <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
                   <div className="group relative aspect-[4/3] overflow-hidden rounded-sm">
@@ -210,7 +210,7 @@ export default function ProductsClient(props: {
                 <h3 className="text-2xl font-extralight tracking-tight text-stone-900 sm:text-3xl">
                   {mattress.title}
                 </h3>
-                <span className="mt-4 block h-px w-10 bg-[#6B2737]" />
+                <span className="mt-4 block h-px w-10 bg-[#B39A80]" />
                 <p className="mt-6 max-w-md text-base font-light leading-loose text-stone-500">
                   {mattress.description}
                 </p>

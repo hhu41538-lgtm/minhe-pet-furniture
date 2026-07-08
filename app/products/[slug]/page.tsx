@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import FadeIn from "@/components/ui/FadeIn";
 import { getProductSlugs, getProductBySlug } from "@/lib/products";
 
-const WHATSAPP_NUMBER = "8617796076275";
+const WHATSAPP_NUMBER = "8618320072414";
 
 export function generateStaticParams() {
   return getProductSlugs().map((slug) => ({ slug }));
@@ -53,7 +53,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
   )}`;
 
   return (
-    <main className="bg-[#FAF9F6] text-stone-800">
+    <main className="bg-[#F7F2EA] text-stone-800">
       {/* BREADCRUMB */}
       <div className="mx-auto max-w-6xl px-6 pt-28 sm:px-8 lg:px-10 lg:pt-32">
         <Link
@@ -93,7 +93,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               <h1 className="mt-5 text-4xl font-extralight tracking-tight text-stone-900 sm:text-5xl">
                 {product.name}
               </h1>
-              <p className="mt-4 text-lg font-light italic text-[#6B2737]">
+              <p className="mt-4 text-lg font-light italic text-[#B39A80]">
                 {product.tagline}
               </p>
               <p className="mt-8 max-w-xl text-base font-light leading-loose text-stone-500">
@@ -121,7 +121,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 href={waHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-10 inline-flex items-center gap-2 bg-[#6B2737] px-7 py-3.5 text-sm font-medium tracking-[0.12em] text-white transition-colors duration-300 hover:bg-stone-900"
+                className="mt-10 inline-flex items-center gap-2 bg-[#B39A80] px-7 py-3.5 text-sm font-medium tracking-[0.12em] text-white transition-colors duration-300 hover:bg-stone-900"
               >
                 ENQUIRE ON WHATSAPP
                 <span>&rarr;</span>
@@ -169,7 +169,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
           href={waHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center gap-2 border-b border-[#6B2737] pb-1 text-sm font-medium tracking-[0.12em] text-[#6B2737] transition-colors duration-300 hover:border-stone-900 hover:text-stone-900"
+          className="mt-8 inline-flex items-center gap-2 border-b border-[#B39A80] pb-1 text-sm font-medium tracking-[0.12em] text-[#B39A80] transition-colors duration-300 hover:border-stone-900 hover:text-stone-900"
         >
           START A CONVERSATION
           <span>&rarr;</span>

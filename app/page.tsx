@@ -10,17 +10,17 @@ const FALLBACK = "/images/Other/fallback.jpg";
 const categories = [
   {
     title: "Living Room",
-    description: "Sofas, lounge chairs, coffee tables",
+    description: "Pet-den sofas, side tables, media cabinets",
     folder: "Living Room",
   },
   {
-    title: "Dining & Bedroom",
-    description: "Dining tables, chairs, beds, nightstands",
+    title: "Bedroom & Lounge",
+    description: "Co-sleep beds, chaise loungers, accent chairs",
     folder: "Dining",
   },
   {
-    title: "Custom Interiors",
-    description: "Wardrobes, cabinetry, wall panels, doors",
+    title: "Storage & Utility",
+    description: "Litter cabinets, storage benches, cat-climb shelving",
     folder: "Custom Interiors",
   },
 ];
@@ -36,20 +36,20 @@ export default function Home() {
   const newArrivals = getProducts();
 
   return (
-    <main className="bg-[#FAF9F6] text-stone-800">
+    <main className="bg-[#F7F2EA] text-stone-800">
       {/* HERO */}
       <section className="relative isolate overflow-hidden">
         <HeroCarousel images={heroSlides} />
         <div className="relative z-10 mx-auto flex min-h-[92vh] max-w-5xl flex-col items-center justify-center px-6 text-center">
           <p className="hero-rise mb-8 text-xs font-medium uppercase tracking-[0.5em] text-white/70" style={{ animationDelay: "0.1s" }}>
-            Meimi&H
+            MINHE
           </p>
           <h1 className="hero-rise max-w-4xl text-[2.75rem] font-extralight leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-[5rem]" style={{ animationDelay: "0.25s" }}>
-            Where beauty dwells,
-            <br className="hidden sm:block" /> the heart finds
+            Where pets belong,
+            <br className="hidden sm:block" /> beautifully
           </h1>
-          <p className="hero-rise mt-8 max-w-md text-base font-light leading-relaxed tracking-wide text-white/80" style={{ animationDelay: "0.45s" }}>
-            Refined furniture, made to feel like home.
+          <p className="hero-rise mt-8 max-w-xl text-base font-light leading-relaxed tracking-wide text-white/80" style={{ animationDelay: "0.45s" }}>
+            Modern co-living furniture with hidden nooks, dens, and beds built in.
           </p>
           <a
             href="/products"
@@ -71,16 +71,17 @@ export default function Home() {
                 Our Philosophy
               </p>
               <h2 className="mt-6 text-4xl font-extralight leading-[1.15] tracking-tight text-stone-900 sm:text-5xl">
-                Furniture made to feel like home.
+                Designed for people and pets to live beautifully together.
               </h2>
               <p className="mt-8 max-w-md text-base font-light leading-loose text-stone-500">
-                Every piece can be tailored to your space and built by hand in our
-                Foshan atelier &mdash; where twenty years of craft meet a quieter,
-                more considered idea of luxury.
+                Every piece hides a nook, den, or bed for your companion &mdash;
+                built by hand in our Foshan atelier, where considered design meets a
+                calmer, more beautiful way to share a home with the ones you love
+                most.
               </p>
               <a
                 href="/about"
-                className="group mt-10 inline-flex items-center gap-2 text-sm font-medium tracking-[0.12em] text-[#6B2737] transition-colors duration-300 hover:text-stone-900"
+                className="group mt-10 inline-flex items-center gap-2 text-sm font-medium tracking-[0.12em] text-[#B39A80] transition-colors duration-300 hover:text-stone-900"
               >
                 OUR STORY
                 <span className="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
@@ -91,7 +92,7 @@ export default function Home() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
               <Image
                 src={ethosImage}
-                alt="Meimi&H interior"
+                alt="MINHE pet co-living interior"
                 fill
                 className="object-cover"
               />
@@ -172,7 +173,7 @@ export default function Home() {
                     </span>
                   </div>
                   <div className="mt-5">
-                    <h3 className="text-base font-light tracking-tight text-stone-900 transition-colors duration-300 group-hover:text-[#6B2737]">
+                    <h3 className="text-base font-light tracking-tight text-stone-900 transition-colors duration-300 group-hover:text-[#B39A80]">
                       {product.name}
                     </h3>
                     <p className="mt-1 text-sm font-light text-stone-400">
@@ -189,7 +190,7 @@ export default function Home() {
       {/* FOOTER STRIP */}
       <section className="border-t border-stone-200/70 bg-white/60 px-6 py-10 text-center sm:px-8 lg:px-10">
         <p className="text-xs font-medium uppercase tracking-[0.35em] text-stone-500">
-          Factory Direct &middot; Premium Materials &middot; Custom Orders Welcome &middot; Est. 2020
+          Factory Direct &middot; Pet-Safe Materials &middot; Custom Orders Welcome &middot; Est. 2026
         </p>
       </section>
     </main>

@@ -40,7 +40,7 @@ export default function AboutPage() {
   const showroomImage = pick(2);
 
   return (
-    <main className="bg-[#FAF9F6] text-stone-800">
+    <main className="bg-[#F7F2EA] text-stone-800">
       {/* HEADER */}
       <section className="px-6 pt-32 sm:px-8 lg:px-10 lg:pt-40">
         <FadeIn>
@@ -51,7 +51,7 @@ export default function AboutPage() {
             <h1 className="mt-5 text-4xl font-extralight tracking-tight text-stone-900 sm:text-6xl">
               Our atelier &mdash; Foshan, China
             </h1>
-            <p className="mt-8 text-lg font-light italic leading-relaxed text-[#6B2737] sm:text-xl">
+            <p className="mt-8 text-lg font-light italic leading-relaxed text-[#B39A80] sm:text-xl">
               Creating refinement, one piece at a time.
             </p>
           </div>
@@ -128,7 +128,7 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <FadeIn key={value.title} delay={index * 100}>
                 <div>
-                  <span className="block h-px w-8 bg-[#6B2737]" />
+                  <span className="block h-px w-8 bg-[#B39A80]" />
                   <h3 className="mt-6 text-xl font-light tracking-tight text-stone-900">
                     {value.title}
                   </h3>
