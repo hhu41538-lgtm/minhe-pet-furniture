@@ -18,9 +18,9 @@ export function generateMetadata({
 }): Metadata {
   const product = getProductBySlug(params.slug);
   if (!product) {
-    return { title: "Product not found | Meimi&H" };
+    return { title: "Product not found | MINHE" };
   }
-  const title = `${product.name} | Meimi&H`;
+  const title = `${product.name} | MINHE`;
   const description = product.description;
   const ogImage = encodeURI(product.mainImage);
   return {
@@ -49,7 +49,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
   }
 
   const waHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    `Hi Meimi&H, I'd like to know more about the ${product.name}.`
+    `Hi MINHE, I'd like to know more about the ${product.name}.`
   )}`;
 
   return (
@@ -57,20 +57,20 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       {/* BREADCRUMB */}
       <div className="mx-auto max-w-6xl px-6 pt-28 sm:px-8 lg:px-10 lg:pt-32">
         <Link
-          href="/#new-arrivals"
+          href="/products"
           className="group inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.25em] text-stone-400 transition-colors hover:text-stone-700"
         >
           <span className="transition-transform duration-300 group-hover:-translate-x-1">
             &larr;
           </span>
-          Collections
+          All Products
         </Link>
       </div>
 
       {/* HERO IMAGE */}
       <section className="px-6 pt-8 sm:px-8 lg:px-10">
         <FadeIn>
-          <div className="relative mx-auto aspect-[16/10] max-w-6xl overflow-hidden rounded-sm">
+          <div className="relative mx-auto aspect-[16/10] max-w-6xl overflow-hidden rounded-sm shadow-luxe">
             <Image
               src={product.mainImage}
               alt={product.name}
@@ -88,7 +88,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
           <FadeIn>
             <div>
               <p className="text-xs font-medium uppercase tracking-[0.4em] text-stone-400">
-                New Arrival
+                {product.subcategory}
               </p>
               <h1 className="mt-5 text-4xl font-extralight tracking-tight text-stone-900 sm:text-5xl">
                 {product.name}
@@ -141,12 +141,12 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             <div className="grid gap-5 sm:grid-cols-2">
               {product.detailImages.map((src, index) => (
                 <FadeIn key={src} delay={(index % 2) * 100}>
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+                  <div className="group relative aspect-[4/3] overflow-hidden rounded-sm shadow-soft transition-shadow duration-500 hover:shadow-luxe">
                     <Image
                       src={src}
                       alt={`${product.name} detail ${index + 1}`}
                       fill
-                      className="object-cover transition-transform duration-[900ms] ease-out hover:scale-105"
+                      className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-105"
                     />
                   </div>
                 </FadeIn>
@@ -157,12 +157,12 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       )}
 
       {/* CTA STRIP */}
-      <section className="border-t border-stone-200/70 bg-white/60 px-6 py-16 text-center sm:px-8 lg:px-10">
+      <section className="border-t border-stone-200/70 bg-[#EFE6D8] px-6 py-16 text-center sm:px-8 lg:px-10">
         <h2 className="text-2xl font-extralight tracking-tight text-stone-900 sm:text-3xl">
           Make it yours.
         </h2>
         <p className="mx-auto mt-4 max-w-md text-sm font-light leading-relaxed text-stone-500">
-          Every Meimi&amp;H piece is built to order and can be tailored in size,
+          Every MINHE piece is built to order and can be tailored in size,
           upholstery, and finish. Talk to us about the {product.name}.
         </p>
         <a
