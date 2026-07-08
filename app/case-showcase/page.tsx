@@ -4,49 +4,48 @@ import { getFolderImagePaths } from "@/lib/imageAssets";
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Case Showcase | Meimi&H",
+  title: "Case Showcase | MINHE",
   description:
-    "Real visits, real spaces — a look inside how Meimi&H welcomes clients worldwide, from factory visits to finished interiors. Full case studies coming soon.",
+    "Real homes shared by people and pets - a look at how MINHE brings pet co-living furniture into everyday life. Full case studies coming soon.",
   alternates: { canonical: "/case-showcase" },
 };
 
 const FALLBACK = "/images/Other/fallback.jpg";
 
 const placeholderCases = [
-  { id: "case-01", title: "Case Study 01", location: "Coming soon" },
-  { id: "case-02", title: "Case Study 02", location: "Coming soon" },
-  { id: "case-03", title: "Case Study 03", location: "Coming soon" },
-  { id: "case-04", title: "Case Study 04", location: "Coming soon" },
-  { id: "case-05", title: "Case Study 05", location: "Coming soon" },
-  { id: "case-06", title: "Case Study 06", location: "Coming soon" },
+  { id: "case-01", title: "A Living Room Built for Two", location: "Coming soon", folder: "Living" },
+  { id: "case-02", title: "Where Work Meets Rest", location: "Coming soon", folder: "Study" },
+  { id: "case-03", title: "A Bedroom That Holds You Both", location: "Coming soon", folder: "Bedroom" },
+  { id: "case-04", title: "Co-Living, Whole-Home", location: "Coming soon", folder: "Hero" },
+  { id: "case-05", title: "Quiet Corners for Companions", location: "Coming soon", folder: "Living" },
+  { id: "case-06", title: "Designed Around Real Pets", location: "Coming soon", folder: "Bedroom" },
 ];
 
 export default function CaseShowcasePage() {
-  const images = getFolderImagePaths("Case Showcase");
-
-  const cases = placeholderCases.map((item, index) => ({
-    ...item,
-    image: images.length > 0 ? images[index % images.length] : FALLBACK,
-  }));
+  const cases = placeholderCases.map((item, index) => {
+    const images = getFolderImagePaths(item.folder);
+    return {
+      ...item,
+      image: images.length > 0 ? images[index % images.length] : FALLBACK,
+    };
+  });
 
   return (
     <main className="bg-[#F7F2EA] text-stone-800">
-      {/* HEADER */}
-      <section className="px-6 pt-32 sm:px-8 lg:px-10 lg:pt-40">
+      {/* HERO HEADER */}
+      <section className="border-b border-stone-200/70 bg-gradient-to-b from-[#EFE6D8] to-[#F7F2EA] px-6 pt-36 pb-20 text-center sm:px-8 lg:px-10 lg:pt-44 lg:pb-24">
         <FadeIn>
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-medium uppercase tracking-[0.4em] text-stone-400">
-              Case Showcase
-            </p>
-            <h1 className="mt-5 text-4xl font-extralight tracking-tight text-stone-900 sm:text-6xl">
-              Real visits, real spaces
-            </h1>
-            <p className="mx-auto mt-8 max-w-xl text-base font-light leading-loose text-stone-500">
-              A look inside how we welcome and work with clients from around the
-              world &mdash; from factory visits to finished interiors. Full case
-              studies are coming soon.
-            </p>
-          </div>
+          <p className="text-xs font-medium uppercase tracking-[0.4em] text-stone-400">
+            Case Showcase
+          </p>
+          <h1 className="mx-auto mt-5 max-w-3xl text-4xl font-extralight leading-[1.1] tracking-tight text-stone-900 sm:text-6xl">
+            Real homes, shared beautifully
+          </h1>
+          <p className="mx-auto mt-8 max-w-xl text-base font-light leading-loose text-stone-500">
+            Every delivery is a small experiment in living well with pets. We&apos;re
+            putting together full case studies of real homes and interiors &mdash;
+            coming soon.
+          </p>
         </FadeIn>
       </section>
 
@@ -55,21 +54,21 @@ export default function CaseShowcasePage() {
         <div className="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {cases.map((item, index) => (
             <FadeIn key={item.id} delay={(index % 3) * 100}>
-              <article className="group relative block aspect-[16/9] overflow-hidden rounded-sm">
+              <article className="group relative block aspect-[16/9] overflow-hidden rounded-sm shadow-soft transition-shadow duration-500 hover:shadow-luxe">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-105"
+                  className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/10 to-transparent" />
+                <span className="absolute right-4 top-4 rounded-full bg-white/85 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-stone-700 backdrop-blur">
+                  Coming soon
+                </span>
                 <div className="absolute inset-x-0 bottom-0 p-7">
                   <h2 className="text-lg font-light tracking-tight text-white">
                     {item.title}
                   </h2>
-                  <p className="mt-1 text-sm font-light text-white/70">
-                    {item.location}
-                  </p>
                   <span className="mt-3 block h-px w-8 bg-white/60 transition-all duration-500 group-hover:w-14" />
                 </div>
               </article>
@@ -79,9 +78,9 @@ export default function CaseShowcasePage() {
       </section>
 
       {/* CTA STRIP */}
-      <section className="border-t border-stone-200/70 bg-white/60 px-6 py-16 text-center sm:px-8 lg:px-10">
+      <section className="border-t border-stone-200/70 bg-[#EFE6D8] px-6 py-16 text-center sm:px-8 lg:px-10">
         <h2 className="text-2xl font-extralight tracking-tight text-stone-900 sm:text-3xl">
-          Visit us, or bring us your project.
+          Have a home in mind? Let&apos;s design it together.
         </h2>
         <a
           href="https://wa.me/8618320072414"
