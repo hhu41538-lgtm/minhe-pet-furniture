@@ -1,12 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   --background: #F7F2EA;
   --foreground: #3E3730;
 }
-
 body {
   color: var(--foreground);
   background: var(--background);
@@ -15,7 +13,6 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -27,6 +24,23 @@ body {
   .shadow-soft-hover {
     box-shadow: 0 2px 4px rgba(28, 28, 28, 0.05),
       0 18px 40px rgba(28, 28, 28, 0.08);
+  }
+  .shadow-luxe {
+    box-shadow: 0 4px 14px rgba(62, 55, 48, 0.06),
+      0 26px 60px rgba(62, 55, 48, 0.14);
+  }
+}
+
+/* Parallax background (fixed on desktop, scroll on mobile to avoid jank) */
+.parallax {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
   }
 }
 
@@ -41,10 +55,25 @@ body {
     transform: translateY(0);
   }
 }
-
 .hero-rise {
   opacity: 0;
   animation: heroRise 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Slow scroll-down nudge */
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(7px);
+    opacity: 1;
+  }
+}
+.animate-nudge {
+  animation: nudge 1.9s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -52,5 +81,11 @@ body {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+  .animate-nudge {
+    animation: none;
+  }
+  .parallax {
+    background-attachment: scroll;
   }
 }

@@ -45,7 +45,7 @@ export function getDistributedImages(folderName: string, count: number, fallback
   return Array.from({ length: count }, (_, index) => images[index % images.length] ?? fallbackPath);
 }
 
-// --- Product (sofa) helpers for the "explore by space" subfolders ---
+// --- Product image helpers ---
 
 function leadingNumber(filename: string): number {
   const base = filename.replace(/\.[^.]+$/, "");
@@ -58,8 +58,9 @@ export type ProductImages = {
   detailImages: string[];
 };
 
-export function getProductImages(subfolder: string, fallbackPath = FALLBACK): ProductImages {
-  const folderPath = path.join(process.cwd(), "public", "images", "explore by space", subfolder);
+// folder is a path under public/images, e.g. "Living/Sofas"
+export function getProductImages(folder: string, fallbackPath = FALLBACK): ProductImages {
+  const folderPath = path.join(process.cwd(), "public", "images", ...folder.split("/"));
   if (!fs.existsSync(folderPath)) {
     return { mainImage: fallbackPath, detailImages: [] };
   }
@@ -69,23 +70,13 @@ export function getProductImages(subfolder: string, fallbackPath = FALLBACK): Pr
       (entry) =>
         entry.isFile() && imageExtensions.has(path.extname(entry.name).toLowerCase())
     )
-    .map((entry) => entry.name);
-
-  const mainName = files.find((name) => /new arrivals/i.test(name));
-  const detailNames = files
-    .filter((name) => !/new arrivals/i.test(name))
-    .sort((a, b) => leadingNumber(a) - leadingNumber(b));
+    .map((entry) => entry.name)
+    .sort((a, b) => leadingNumber(a) - leadingNumber(b) || a.localeCompare(b));
 
   const toPath = (name: string) => toPublicPath(path.join(folderPath, name));
 
-  const mainImage = mainName
-    ? toPath(mainName)
-    : detailNames[0]
-    ? toPath(detailNames[0])
-    : fallbackPath;
+  const mainImage = files[0] ? toPath(files[0]) : fallbackPath;
+  const detailImages = files.slice(1).map(toPath);
 
-  return {
-    mainImage,
-    detailImages: detailNames.map(toPath),
-  };
+  return { mainImage, detailImages };
 }
