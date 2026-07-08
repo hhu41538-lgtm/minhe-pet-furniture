@@ -4,9 +4,9 @@ import { getFolderImagePaths } from "@/lib/imageAssets";
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
-  title: "About us | Meimi&H",
+  title: "About us | MINHE",
   description:
-    "Meimi&H is a premium furniture atelier in Foshan, China — 20+ years of craftsmanship meeting a refined global aesthetic. The art of refined living.",
+    "MINHE designs modern co-living furniture for homes shared with pets - crafted in Foshan, China, where considered design meets a calmer way of living together.",
   alternates: { canonical: "/about" },
 };
 
@@ -14,19 +14,19 @@ const FALLBACK = "/images/Other/fallback.jpg";
 
 const values = [
   {
-    title: "Premium Materials",
+    title: "Pet-Safe Materials",
     description:
-      "Hand-selected woods, luxe upholstery, and finishes chosen for durability and beauty.",
+      "Durable, easy-clean fabrics and scratch-friendly surfaces, chosen to live gracefully with real pets and real life.",
   },
   {
-    title: "Master Craftsmen",
+    title: "Considered Design",
     description:
-      "Decades of furniture-making expertise, refined through generations of local craftsmanship.",
+      "Soft curves, low steps, and safe rounded forms - hidden nooks and dens designed around how pets actually behave.",
   },
   {
     title: "Factory Direct",
     description:
-      "Direct sourcing and transparent production, ensuring quality and value at every step.",
+      "Made in our own Foshan workshop and shipped direct, so quality and value stay in balance at every step.",
   },
 ];
 
@@ -46,13 +46,13 @@ export default function AboutPage() {
         <FadeIn>
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-medium uppercase tracking-[0.4em] text-stone-400">
-              The Art of Refined Living
+              Human & Pet, Living as One
             </p>
             <h1 className="mt-5 text-4xl font-extralight tracking-tight text-stone-900 sm:text-6xl">
               Our atelier &mdash; Foshan, China
             </h1>
             <p className="mt-8 text-lg font-light italic leading-relaxed text-[#B39A80] sm:text-xl">
-              Creating refinement, one piece at a time.
+              Furniture designed for people and pets to live beautifully together.
             </p>
           </div>
         </FadeIn>
@@ -64,7 +64,7 @@ export default function AboutPage() {
           <div className="relative mx-auto aspect-[16/9] max-w-6xl overflow-hidden rounded-sm">
             <Image
               src={atelierImage}
-              alt="Meimi&H atelier in Foshan"
+              alt="MINHE atelier in Foshan"
               fill
               priority
               className="object-cover"
@@ -78,12 +78,12 @@ export default function AboutPage() {
         <FadeIn>
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-base font-light leading-loose text-stone-500 sm:text-lg">
-              Founded in 2020 in Shunde District, Longjiang Town, Foshan &mdash;
-              the world&apos;s furniture manufacturing heartland &mdash;
-              Meimi&amp;H was built on one belief: that beautiful furniture should
-              feel as considered as the finest European houses. We bring together
-              20+ years of local craftsmanship with a refined global aesthetic,
-              serving clients who believe their home deserves the extraordinary.
+              MINHE was born from a simple idea: as pets become family, our
+              furniture should understand them too. Based in Shunde District,
+              Longjiang Town, Foshan &mdash; the heartland of the world&apos;s
+              furniture manufacturing &mdash; we design pieces where a nook, den or
+              bed for your companion is built in from the start, so people and pets
+              can share one home in comfort, quietly and beautifully.
             </p>
           </div>
         </FadeIn>
@@ -108,13 +108,13 @@ export default function AboutPage() {
                 Signature Craft
               </p>
               <h2 className="mt-6 text-3xl font-extralight leading-[1.15] tracking-tight text-stone-900 sm:text-4xl">
-                Detail is our discipline.
+                Designed around them, made for you.
               </h2>
               <p className="mt-8 max-w-md text-base font-light leading-loose text-stone-500">
-                Every piece leaves our workshop only after passing through the
-                hands of makers who have spent a lifetime learning how wood, stone
-                and textile behave. The difference is in the millimetres you never
-                see.
+                A half-open den that feels safe without shutting your pet away.
+                Removable, washable cushions. Rounded edges and low steps for older
+                cats and small dogs. The thoughtful details are what turn a piece of
+                furniture into a home you both belong in.
               </p>
             </div>
           </FadeIn>
@@ -148,7 +148,7 @@ export default function AboutPage() {
           <div className="relative mx-auto aspect-[21/9] max-w-6xl overflow-hidden rounded-sm">
             <Image
               src={showroomImage}
-              alt="Meimi&H showroom"
+              alt="MINHE showroom"
               fill
               className="object-cover"
             />
@@ -161,10 +161,10 @@ export default function AboutPage() {
         <FadeIn>
           <blockquote className="mx-auto max-w-3xl">
             <p className="text-2xl font-extralight leading-relaxed tracking-tight text-stone-900 sm:text-3xl">
-              &ldquo;Where beauty dwells, the heart finds.&rdquo;
+              &ldquo;Where pets belong, beautifully.&rdquo;
             </p>
             <footer className="mt-6 text-xs font-medium uppercase tracking-[0.3em] text-stone-400">
-              Meimi&amp;H
+              MINHE
             </footer>
           </blockquote>
         </FadeIn>
