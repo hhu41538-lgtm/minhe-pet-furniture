@@ -38,7 +38,6 @@ const otherNavItems = [
   { label: "Home", href: "/" },
   { label: "Custom Furniture", href: "/custom" },
   { label: "Case Showcase", href: "/case-showcase" },
-  { label: "Blog", href: "/blog" },
   { label: "About us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -143,9 +142,6 @@ export default function Header() {
           </Link>
           <Link href="/case-showcase" className={navLinkClass("/case-showcase")}>
             Case Showcase
-          </Link>
-          <Link href="/blog" className={navLinkClass("/blog", false)}>
-            Blog
           </Link>
           <Link href="/about" className={navLinkClass("/about")}>
             About us
